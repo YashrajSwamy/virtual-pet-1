@@ -32,12 +32,13 @@ function draw() {
   text("Food Remaining "+ foodS,100,40)
 
   if(keyWentDown(UP_ARROW)){
-    foodS = foodS-1
-    if(foodS===0){
+
+    if(foodS<=0){
       text("Food Is Finished "+foodS,100,40)
 
 
-    }else if(foodS>=0){
+    }else if(foodS>0){
+      foodS = foodS-1
       writeStock(foodS)
       dog.addImage(happyDog)
 
